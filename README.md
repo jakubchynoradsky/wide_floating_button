@@ -24,4 +24,7 @@ Scaffold(
 ```
 I used Text as a child widget, but you can use anything.
 
+| :exclamation:  Parrent of `FloatingButton` must be `floatingActionButton(Scaffold)`.      |
+|---------------------------------------------------------------------------------------|
+
 <br>
