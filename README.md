@@ -7,7 +7,7 @@
 ```Dart
 import 'FloatingButton.dart';
 ```
-2. Create Scaffold with `floatingActionButton` and as parametr use FloatingButton widget (onTap and child required).
+2. Create Scaffold with property `floatingActionButton` and as value use FloatingButton widget (onTap and child required).
 ```Dart
 Scaffold(
   appBar: AppBar(
@@ -24,7 +24,20 @@ Scaffold(
 ```
 I used Text as a child widget, but you can use anything.
 
-| :exclamation:  Parrent of `FloatingButton` must be `floatingActionButton(Scaffold)`.      |
+| :exclamation:  Parrent of `FloatingButton` must be `floatingActionButton(Scaffold)`.  |
 |---------------------------------------------------------------------------------------|
 
 <br>
+
+## Properties
+
+| Name          | Type          | Default | Description  |
+| ------------- |:-------------:| :-------------:| :-----|
+| `child*`        | Widget        |  null       |  Widget that will be inside button.  |
+| `onTap*`        | Function      |  null       |  What happens on button tap.  |
+| `onLongPress`   | Function      |  null       |  What happens on button long press.  |
+| `onHighlightChanged` | Function |  null       |  What happens on highlight change.  |
+| `autofocus`     | bool          |  false      |  True if this widget will be selected as the initial focus.  |
+| `backgroundColor` | Color       |  Color.blue |  Background color of button.  |
+| `borderRadius`  | double        |  10         |  How much do you want corners to be rounded. (0 = sharp corners)   |
+| `height`        | double        |  55         |  Height of button.   |
