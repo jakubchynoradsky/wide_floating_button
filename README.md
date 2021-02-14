@@ -4,11 +4,11 @@
 
 ## Simple usage
 1. Download class `FloatingButton` and import it.
-```
+```Dart
 import 'FloatingButton.dart';
 ```
 2. Create Scaffold with `floatingActionButton` and as parametr use FloatingButton widget (onTap and child required).
-```
+```Dart
 Scaffold(
   appBar: AppBar(
     title: Text('Wide floating button app'),
