@@ -44,7 +44,7 @@ class _FloatingButtonState extends State<FloatingButton> {
             onLongPress: widget.onLongPress,
             child: new Container(
               height: widget.height,
-              width: width - 30,
+              width: width - 32,
               child: Center(child: widget.child),
             ),
           ),
