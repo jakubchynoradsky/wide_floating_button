@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-class FloatingButton extends StatefulWidget {
-  Widget child;
-  Color backgroundColor;
-  double borderRadius;
-  double height;
-  Function onTap;
-  Function onLongPress;
-  Function onHighlightChanged;
-  bool autofocus;
+class FloatingButton extends StatelessWidget {
+  final Widget child;
+  final Color backgroundColor;
+  final double borderRadius;
+  final double height;
+  final Function onTap;
+  final Function onLongPress;
+  final Function onHighlightChanged;
+  final bool autofocus;
 
-  FloatingButton(
+  const FloatingButton(
     {
       Key key,
       @required this.child,
@@ -25,32 +25,27 @@ class FloatingButton extends StatefulWidget {
   ) : super(key: key);
 
   @override
-  _FloatingButtonState createState() => _FloatingButtonState();
-}
-
-class _FloatingButtonState extends State<FloatingButton> {
-  @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
 
     return ClipRRect(
-      borderRadius: BorderRadius.circular(widget.borderRadius),
+      borderRadius: BorderRadius.circular(this.borderRadius),
       child: Container(
         child: new Material(
           child: new InkWell(
-            autofocus: widget.autofocus,
-            onHighlightChanged: widget.onHighlightChanged,
-            onTap: widget.onTap,
-            onLongPress: widget.onLongPress,
+            autofocus: this.autofocus,
+            onHighlightChanged: this.onHighlightChanged,
+            onTap: this.onTap,
+            onLongPress: this.onLongPress,
             child: new Container(
-              height: widget.height,
+              height: this.height,
               width: width - 32,
-              child: Center(child: widget.child),
+              child: Center(child: this.child),
             ),
           ),
           color: Colors.transparent,
         ),
-        color: widget.backgroundColor,
+        color: this.backgroundColor,
       ),
     );
   }
